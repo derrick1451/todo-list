@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  height: 100%;
+  font-size: 16px;
+}
+
+.todo-list {
+  border: 1px solid rgb(116, 112, 112);
+  width: 30%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
