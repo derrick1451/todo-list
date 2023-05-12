@@ -1,30 +1,26 @@
 # 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 TO DO LIST ](#-to-do-list-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 
 
 # 📖 TO DO LIST <a name="about-project"></a>
 
 
-**To do list** in this milestone we implemented the first part of the to do list by using webpack as our bundler 
-
+**To do list** in this milestone we implemented the second part of the to do list and  we implementad the CRUD (create, read, update, delete) methods.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -42,6 +38,11 @@
 
 - **update to do list dynamically**
 - **use webpack**
+- **delete a todo**
+- **edit the list**
+- **local storage to save the list**
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,7 +52,6 @@ To get a local copy up and running, follow these steps. It's a simple project.
 
 ### Prerequisites
 In order to run this project you need:
-
 - A browser that supports html5 and css3
 
 ### Install
@@ -80,9 +80,8 @@ In order to run this project you need:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **style elements with flex-box and grid**
-- **update todo list using the input**
+- **edit the clear all button functionality**
 - **use es6 modules**
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
