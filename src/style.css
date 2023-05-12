@@ -1,50 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
 }
 
 html {
   height: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-  height: 100%;
-  font-size: 16px;
+}
+
+.container {
+  margin: 200px auto;
+  width: 500px;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: rgb(63, 55, 55);
+}
+
+.input-section {
+  display: flex;
+  border: 2px solid gainsboro;
+  border-radius: 4px;
+  justify-content: space-between;
+  padding: 0.4rem 1rem;
+  width: 100%;
+}
+
+#inputs {
+  outline: none;
+  border: none;
+  flex-grow: 1;
+  font-size: 1.2rem;
+}
+
+.clear-btn {
+  color: rgb(120, 117, 117);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .todo-list {
-  border: 1px solid rgb(116, 112, 112);
-  width: 30%;
-  height: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
+  gap: 0.4rem;
 }
 
-input {
-  padding: 0.5rem;
+.list-item {
+  display: flex;
+  border: 1px solid gainsboro;
+  padding: 0.7rem;
+  gap: 0.5rem;
+  border-left: none;
+  border-right: none;
+  align-items: center;
+}
+
+.list-item .description {
+  flex-grow: 1;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
 }
 
 button {
-  padding: 1rem;
-  font-size: 1.3rem;
-  cursor: pointer;
   border: none;
-  border-radius: 0.4rem;
-}
-
-.list-items {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
 }
