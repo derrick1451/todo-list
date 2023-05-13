@@ -4,6 +4,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Install](#install)
@@ -43,7 +44,8 @@
 - **local storage to save the list**
 - **add a delete allcompleted todos button**
 
-
+## Live Demo
+[live demo](https://derrick1451.github.io/todo-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
