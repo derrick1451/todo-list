@@ -93,6 +93,10 @@ body {
   border: none;
 }
 
+.decorated {
+  text-decoration: line-through;
+}
+
 button {
   border: none;
 }

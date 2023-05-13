@@ -20,7 +20,7 @@
 # 📖 TO DO LIST <a name="about-project"></a>
 
 
-**To do list** in this milestone we implemented the second part of the to do list and  we implementad the CRUD (create, read, update, delete) methods.
+**To do list** in this milestone we implemented the third part of the to do list and  we implemented the interactive section of deleting all the completed todos and updating the window when you reload
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -41,6 +41,7 @@
 - **delete a todo**
 - **edit the list**
 - **local storage to save the list**
+- **add a delete allcompleted todos button**
 
 
 
@@ -80,7 +81,7 @@ In order to run this project you need:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - **style elements with flex-box and grid**
-- **edit the clear all button functionality**
+- **drop down function**
 - **use es6 modules**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

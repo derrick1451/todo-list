@@ -22,14 +22,22 @@ class GenerateList {
     this.todoList.forEach((item, indexs) => {
       const li = document.createElement('li');
       li.classList.add('list-item');
-      const x = document.createElement('input');
-      x.setAttribute('type', 'checkbox');
-      li.appendChild(x);
+      const checkbox = document.createElement('input');
+      checkbox.setAttribute('type', 'checkbox');
+      checkbox.setAttribute('checked', false);
+      li.appendChild(checkbox);
       const text = document.createElement('input');
       text.type = 'text';
       text.setAttribute('readonly', 'readonly');
       text.classList.add('description');
       li.appendChild(text);
+      if (item.completed === true) {
+        checkbox.checked = true;
+        text.classList.add('decorated');
+      } else {
+        checkbox.checked = false;
+        text.classList.remove('decorated');
+      }
       text.value = `${item.description}`;
       const button1 = document.createElement('button');
       li.appendChild(button1);
@@ -40,6 +48,17 @@ class GenerateList {
       listContainer.appendChild(li);
       item.index = indexs + 1;
       text.setAttribute('id', `${item.index}`);
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          item.completed = true;
+          text.classList.toggle('decorated');
+          this.saveBooks();
+        } else {
+          item.completed = false;
+          text.classList.toggle('decorated');
+          this.saveBooks();
+        }
+      });
       button1.addEventListener('click', () => {
         if (button1.innerText.toLocaleLowerCase() === 'edit') {
           text.removeAttribute('readonly');
@@ -83,5 +102,18 @@ class GenerateList {
       return input;
     });
   };
+
+  deleteAll=() => {
+    const clearAll = document.querySelector('.clear-btn');
+    clearAll.addEventListener('click', () => {
+      const newTasks = this.todoList.filter((task) => task.completed === false);
+
+      for (let i = 0; i < newTasks.length; i += 1) {
+        newTasks[i].index = i + 1;
+      }
+      localStorage.setItem('todos', JSON.stringify(newTasks));
+      window.location.reload();
+    });
+  }
 }
 export default GenerateList;
