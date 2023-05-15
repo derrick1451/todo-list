@@ -12,12 +12,15 @@ class GenerateList {
     this.showList();
   };
 
+  // save lists on local storage
   saveBooks=() => {
     localStorage.setItem('todos', JSON.stringify(this.todoList));
   }
 
+  // show todos
   showList = () => {
     const listContainer = document.querySelector('.todo-list');
+    // remove all existing todos
     listContainer.innerHTML = '';
     this.todoList.forEach((item, indexs) => {
       const li = document.createElement('li');
@@ -40,11 +43,12 @@ class GenerateList {
       }
       text.value = `${item.description}`;
       const button1 = document.createElement('button');
+      button1.classList.add('edit');
       li.appendChild(button1);
-      button1.innerHTML = 'edit';
+      button1.innerHTML = 'Edit';
       const button = document.createElement('button');
       li.appendChild(button);
-      button.innerHTML = '<i class="fa-solid fa-trash"></i>';
+      button.innerHTML = '<i class="fa-solid fa-trash trash"></i>';
       listContainer.appendChild(li);
       item.index = indexs + 1;
       text.setAttribute('id', `${item.index}`);
@@ -60,10 +64,10 @@ class GenerateList {
         }
       });
       button1.addEventListener('click', () => {
-        if (button1.innerText.toLocaleLowerCase() === 'edit') {
+        if (button1.innerText === 'Edit') {
           text.removeAttribute('readonly');
           text.focus();
-          button1.innerHTML = 'save';
+          button1.innerHTML = 'Save';
           item.description = text.value;
         } else {
           text.setAttribute('readonly', 'readonly');
@@ -106,13 +110,10 @@ class GenerateList {
   deleteAll=() => {
     const clearAll = document.querySelector('.clear-btn');
     clearAll.addEventListener('click', () => {
-      const newTasks = this.todoList.filter((task) => task.completed === false);
-
-      for (let i = 0; i < newTasks.length; i += 1) {
-        newTasks[i].index = i + 1;
-      }
-      localStorage.setItem('todos', JSON.stringify(newTasks));
-      window.location.reload();
+      const filteredArray = this.todoList.filter((item) => !item.completed);
+      this.todoList = filteredArray;
+      this.showList();
+      this.saveBooks();
     });
   }
 }
