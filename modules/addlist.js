@@ -1,4 +1,4 @@
-import MakeList from "./listclass.js";
+import MakeList from './listclass.js';
 
 class GenerateList {
   constructor() {
@@ -6,11 +6,11 @@ class GenerateList {
   }
 
   add = (value) => {
-    if (value === "") return;
+    if (value === '') return;
     const todo = new MakeList(value);
     this.todoList.push(todo);
-    return this.todoList
   };
+
   removeTaskById = (id) => {
     const tasksLeft = this.todoList.filter((task) => task.id !== id);
     tasksLeft.forEach((task, index) => {
@@ -19,4 +19,4 @@ class GenerateList {
     return tasksLeft;
   }
 }
-export default GenerateList
+export default GenerateList;

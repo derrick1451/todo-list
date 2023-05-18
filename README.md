@@ -45,7 +45,7 @@
 - **add a delete allcompleted todos button**
 
 ## Live Demo
-[live demo](https://derrick1451.github.io/todo-list/)
+[live demo]coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
