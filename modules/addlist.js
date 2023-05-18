@@ -6,9 +6,9 @@ class GenerateList {
   }
 
   add = (value) => {
-    if (value === '') return;
     const todo = new MakeList(value);
     this.todoList.push(todo);
+    return this.todoList;
   };
 
   removeTaskById = (id) => {
